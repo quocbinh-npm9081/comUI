@@ -73,3 +73,52 @@
     </div>
   </div>
 </div>
+
+<div class="cart-item-view" *ngIf="view === 'currCartItem'">
+  <div class="card">
+    <div class="row g-0">
+      <div
+        class="col-4 overflow-hiddend d-flex justify-content-center align-items-center"
+      >
+        <img
+          src="../../assets/Images/mobiles/10/1.jpg"
+          alt="card-img-top"
+          class="img-fluid rounded-start"
+        />
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h5 class="card-title text-success">
+            Final price
+            <span class="text-primary">-20%</span>
+          </h5>
+          <h6 class="card-subtitle text-danger text-decoration-line-through">
+            Original Price
+          </h6>
+        </div>
+        <div class="card-footer d-grid gap-2">
+          <button class="btn btn-outline-danger" type="button">
+            Remove from cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cart-item-view" *ngIf="view === 'prevCartItem'">
+  <div class="card text-center d-flex flex-row">
+    <div
+      class="col-4 overflow-hiddend d-flex justify-content-center align-items-center"
+    >
+      <img
+        src="../../assets/Images/mobiles/10/1.jpg"
+        alt="card-img-top"
+        class="img-fluid rounded-start"
+      />
+    </div>
+    <div class="card-body">
+      <h5 class="card-title title">Title</h5>
+    </div>
+  </div>
+</div>
