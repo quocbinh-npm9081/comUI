@@ -1,0 +1,120 @@
+<div class="my-container mx-auto border border-dark">
+  <div class="row g-0">
+    <div class="col-4">
+      <div class="d-flex justify-content-center align-items-center">
+        <img
+          src="../../assets/Images/mobiles/10/{{ iamgeIndex }}.jpg"
+          alt=""
+          class="w-100"
+        />
+      </div>
+      <div
+        class="image-thumbnails d-flex justify-content-bettween align-items-center"
+      >
+        <img
+          src="../../assets/Images/mobiles/10/1.jpg"
+          alt=""
+          alt="Thumbnail image"
+          (click)="iamgeIndex = 1"
+          [ngClass]="{ active: iamgeIndex == 1 }"
+        />
+        <img
+          src="../../assets/Images/mobiles/10/2.jpg"
+          alt=""
+          alt="Thumbnail image"
+          (click)="iamgeIndex = 2"
+          [ngClass]="{ active: iamgeIndex == 2 }"
+        />
+        <img
+          src="../../assets/Images/mobiles/10/3.jpg"
+          alt=""
+          alt="Thumbnail image"
+          (click)="iamgeIndex = 3"
+          [ngClass]="{ active: iamgeIndex == 3 }"
+        />
+        <img
+          src="../../assets/Images/mobiles/10/4.jpg"
+          alt=""
+          alt="Thumbnail image"
+          (click)="iamgeIndex = 4"
+          [ngClass]="{ active: iamgeIndex == 4 }"
+        />
+        <img
+          src="../../assets/Images/mobiles/10/5.jpg"
+          alt=""
+          alt="Thumbnail image"
+          (click)="iamgeIndex = 5"
+          [ngClass]="{ active: iamgeIndex == 5 }"
+        />
+      </div>
+    </div>
+    <div class="col-8 p-5">
+      <div class="card text-center">
+        <div class="card-header fw-bold fs-5 text-success">Header</div>
+
+        <div class="card-body">
+          <h5 class="card-title title">Title</h5>
+          <h6 class="card-subtitle my-2 text-primary">
+            12 products are available
+          </h6>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title text-success">
+            Final price
+            <span class="text-primary">-20%</span>
+          </h5>
+          <h6 class="card-subtitle text-danger text-decoration-line-through">
+            Original Price
+          </h6>
+        </div>
+
+        <div class="card-footer d-grid gap-2">
+          <button class="btn btn-outline-success" type="button">
+            Add to cart
+          </button>
+        </div>
+        <div class="card-body">
+          <p class="cart-text">Description</p>
+          <ul class="list-group">
+            <li
+              class="list-group-item list-group-item-action"
+              *ngFor="let item of [1, 2, 3]"
+            >
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row g-0">
+    <div class="col-12 ps-5 pt-4 pb-3">
+      <h3 class="border border-secondary text-center py-2 my-rounded w-25">
+        Related Product
+      </h3>
+    </div>
+    <div class="col-12">
+      <app-suggested></app-suggested>
+    </div>
+  </div>
+  <div class="row g-0 my-5">
+    <h3>Give your review</h3>
+    <h5 class="mt-4">Write your review</h5>
+    <textarea name="" id="" class="w-75 p-2"></textarea>
+    <div class="d-flex align-items-start">
+      <button class="btn btn-outline-secondary mt-4 me-5" type="button">
+        Save Review
+      </button>
+      <div>
+        <h6 class="text-danger mt-4">Login is require for review</h6>
+        <h6 class="text-danger">Login is require for review</h6>
+        <h6 class="text-success">Review saved successfully</h6>
+      </div>
+    </div>
+  </div>
+  <div class="col p-3">
+    <h3>Other review</h3>
+    h6
+  </div>
+</div>

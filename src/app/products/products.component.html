@@ -1,0 +1,63 @@
+<div class="container mx-auto border border-dark">
+  <div class="border mb-5 p-3 d-flex justify-content-around">
+    <div class="btn-group">
+      <button
+        class="btn btn-outline-secondary"
+        [ngClass]="{ active: view === 'grid' }"
+        (click)="view = 'grid'"
+      >
+        Grid
+      </button>
+      <button
+        class="btn btn-outline-secondary"
+        [ngClass]="{ active: view === 'list' }"
+        (click)="view = 'list'"
+      >
+        List
+      </button>
+    </div>
+    <div class="w-50 d-flex">
+      <span class="me-5 d-flex align-items-center fs-5 fw-bold">Sort by</span>
+      <div class="btn-group" role="group">
+        <button
+          class="btn btn-outline-secondary"
+          [ngClass]="{ active: sort === 'default' }"
+          (click)="sort = 'default'"
+        >
+          Default
+        </button>
+        <button
+          class="btn btn-outline-secondary"
+          [ngClass]="{ active: sort === 'desc' }"
+          (click)="sort = 'desc'"
+        >
+          Price (High to Low)
+        </button>
+        <button
+          class="btn btn-outline-secondary"
+          [ngClass]="{ active: sort === 'asc' }"
+          (click)="sort = 'asc'"
+        >
+          Price (Low to High)
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="border p-5">
+    <div class="grid-view" *ngIf="view === 'grid'">
+      <div class="row g-5">
+        <div class="col-3" *ngFor="let product of [1, 2, 3, 4, 5]">
+          <app-product></app-product>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-view" *ngIf="view === 'list'">
+      <div class="row g-5">
+        <div *ngFor="let product of [1, 2, 3, 4, 5]">
+          <app-product [view]="'list'"></app-product>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
