@@ -98,7 +98,7 @@
       <app-suggested></app-suggested>
     </div>
   </div>
-  <div class="row g-0 my-5">
+  <div class="row g-0 m-5">
     <h3>Give your review</h3>
     <h5 class="mt-4">Write your review</h5>
     <textarea name="" id="" class="w-75 p-2"></textarea>
@@ -115,6 +115,18 @@
   </div>
   <div class="col p-3">
     <h3>Other review</h3>
-    h6
+    <h6 *ngIf="1">No Review Yet!</h6>
+    <div class="cart mt-3" *ngFor="let review of [1, 2, 3]">
+      <div class="card-header d-flex justify-content-between">
+        <div class="card-text">Rohan Ankaloken</div>
+        <div class="card-text fst-italic">
+          Reviewd On:
+          <span class="fw-bold">{{ currentDate | date : "dd-MMM-yyyy" }}</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-text">Review</div>
+      </div>
+    </div>
   </div>
 </div>

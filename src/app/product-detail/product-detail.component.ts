@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ProductDetailComponent {
   iamgeIndex: number = 1;
+  currentDate = new Date();
 }
