@@ -35,10 +35,13 @@
     </h4>
     <div class="d-flex justify-content-center align-items-center">
       <h5 class="me-4">Select any Method</h5>
-      <select class="form-select w-25">
+      <select class="form-select w-25" [formControl]="selectedPaymentMethod">
         <option value="0">Open this select menu</option>
-        <option>
-          <span>vc</span>
+        <option
+          *ngFor="let paymentMenthod of [1, 2, 3]"
+          value="{{ paymentMenthod }}"
+        >
+          <span>{{ paymentMenthod }}</span>
         </option>
       </select>
     </div>

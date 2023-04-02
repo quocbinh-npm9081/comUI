@@ -10,6 +10,8 @@ export class OrderComponent {
   selectedPaymentMethodName = 'a';
   selectedPaymentMethod = new FormControl('0');
   ngOnInit(): void {
+    console.log('selectedPaymentMethod__', this.selectedPaymentMethod);
+
     this.selectedPaymentMethod.valueChanges.subscribe((res: any) => {
       if (res === '0') this.selectedPaymentMethodName = '';
       else this.selectedPaymentMethodName = res.toString();
