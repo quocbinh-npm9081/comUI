@@ -64,11 +64,25 @@
           </tr>
           <tr>
             <td>Address</td>
-            <td>sdzsd</td>
+            <td *ngIf="true">
+              My adress will go here !
+              <a routerLink="/account-settings">Change</a>
+            </td>
+            <td *ngIf="!true">
+              You havemnot entered address
+              <a routerLink="/account" account-settings>Please Enter thatr</a>
+            </td>
           </tr>
           <tr>
             <td>Mobile Number</td>
-            <td>0326732670</td>
+            <td *ngIf="true">
+              My adress will go here !
+              <a routerLink="/account-settings">Change</a>
+            </td>
+            <td *ngIf="!true">
+              You havemnot entered address
+              <a routerLink="/account" account-settings>Please Enter thatr</a>
+            </td>
           </tr>
         </thead>
       </table>
